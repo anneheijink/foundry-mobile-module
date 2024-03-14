@@ -1,0 +1,19 @@
+{
+	"id" : "Foundry Mobile Module",
+	"description" : "A module that makes foundy usable on a mobile phone.",
+	"authors" : [
+		{
+			"id" : "Anne"
+		}
+	],
+	"version" : "0.1",
+	"compatibility" : {
+		"minimum" : 11
+	},
+	"styles" : [
+		"styles/foundry-mobile.css"
+	],
+	"system" : [
+		"dnd5e"
+	]
+}
