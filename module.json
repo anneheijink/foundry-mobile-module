@@ -1,9 +1,11 @@
 {
 	"id" : "foundry-mobile-module",
+	"title" : "Foundry Mobile Module",
 	"description" : "A module that makes foundy usable on a mobile phone.",
 	"authors" : [
 		{
-			"id" : "anneheijink"
+			"id" : "anneheijink",
+			"name" : "Anne Heijink"
 		}
 	],
 	"version" : "0.0.1",
