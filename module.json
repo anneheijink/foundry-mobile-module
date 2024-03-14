@@ -3,10 +3,10 @@
 	"description" : "A module that makes foundy usable on a mobile phone.",
 	"authors" : [
 		{
-			"id" : "Anne"
+			"id" : "anneheijink"
 		}
 	],
-	"version" : "0.1",
+	"version" : "0.0.1",
 	"compatibility" : {
 		"minimum" : 11
 	},
@@ -15,5 +15,8 @@
 	],
 	"system" : [
 		"dnd5e"
-	]
+	],
+	"url" : "https://github.com/anneheijink/foundry-mobile-module",
+	"manifest" : "https://raw.githubusercontent.com/anneheijink/foundry-mobile-module/main/module.json",
+	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.1.zip"
 }
