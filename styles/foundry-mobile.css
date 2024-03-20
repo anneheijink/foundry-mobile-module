@@ -1,208 +1,251 @@
 @media only screen and (max-width: 1023px) {
-  #ui-left, #ui-middle {
-    display: none;
-  }
-
-  #ui-right {
-    width: 100vw;
-
-  }
-
-  :root {
-    --sidebar-width: 100%;
-  }
-  
-  body {
-    height: 100%;
-    
-  }
-  
-  #tooltip {
-    left: 0 !important;
-    max-width: 100% !important;;
-  }
-  
-  #sidebar {
-    margin: 0;
-    .collapse {
-      display: none;
-    }
-  }
-
-  .window-app {
-    width: 100% !important;
-    min-width: unset !important;
- 
-    left: 0 !important;
-    background: black;
-    
-    &:not(.dialog) {
-      top: 0 !important;
-      height: 100% !important;
-      max-height: unset !important;
-    }
-    .window-resizable-handle {
-      display: none;
-    }
-    
-  }
-
-  .dnd5e2.sheet.actor.character {
-    min-width: unset;
-    min-height: unset;
-
-    .sidebar {
-      /*! left: 0; */
-      justify-content: center;
-      
-      .rows {
-        padding-left: 0;
-        padding-right: 0;
-        overflow-x: scroll;
-      }
-
-      .rows > div {
-        gap: 0.75rem;
-        justify-content: center;
-      }
+    #ui-left, #ui-middle {
 
     }
 
-    .ability-scores {
-      left: 0;
-
-      .rows {
-        padding-left: 0;
-        padding-right: 0;
-        /*! overflow-x: scroll; */
-      }
-
-      .rows > div {
-        gap: 0.5rem;
-        justify-content: center;
-
-      }
-      /*! position: relative; */
-      z-index: 2;
-      
-      .ability-score {
-        max-width: calc(100%/6 - 10px);
-      }
+    #ui-right {
+        width: 100vw;
+        height: 100%;
+        position: absolute
     }
-    
-    form.tab-details .sheet-body:has(+ section.ability-scores) .main-content {
-      padding-top: 3.5rem;
+
+    :root {
+        --sidebar-width: 100%;
     }
-    form.collapsed .main-content {
-      padding-left: 0.5rem;
-      > .sidebar{
-        margin-left: unset;
-        /*! height: ; */
-      }
-      .card {
-        .portrait, .stats, .death-tray {
-          display: none !important;;
+
+    body {
+        height: 100%;
+
+    }
+
+    #tooltip {
+        left: 0 !important;
+        max-width: 100% !important;;
+    }
+
+    #sidebar {
+        margin: 0;
+        height: 100%;
+
+        &:not(.collapsed) {
+            border-radius: 0;
+
+            #sidebar-tabs {
+                --sidebar-tab-height: 42px;
+                --sidebar-tab-width: calc(100% / 11);
+            }
         }
-      }
-      .favorites {
-        display: none
-      }
-    }
-    .sheet-body .main-content {
-      gap: 0;
-      padding-top: 0.5rem;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      
-      .sidebar .card {
-        .collapser {
 
-  inset: auto calc(50% - 16px) 100% auto;
-  height: 16px;
-  width: 32px;
-  border-radius: 3px 3px 0 0;
-        }
-        margin: auto;
-        display: flex;
-        .portrait {
-          width: 50%;
-          display: inline-block;
-          height: auto;
-          aspect-ratio: 1 !important;
-          > img {
-            border-bottom: 0;
-            object-position: center;
-          }
-        }
-        .stats {
-          width: var(--dnd5e-sheet-sidebar-width);
-        }
-        margin-top: 1rem;
-      }
-    }
-    
-    .sheet-body .tab-body {
-      padding-bottom: calc(1.5rem + 30px);
-      
-      .details.col-2 {
-        width: unset;
-        display: flex;
-        flex-direction: column
-      }
-    }
-    .main-content .tab-body {
-      padding-top: 10px;
-    }
-    nav.tabs {
-      position: absolute;
-      flex-direction: row;
-      gap: 1rem;
-      margin-left: 1rem;
-      left: unset;
-      margin-right: auto;
-      top: unset;
-      bottom: 1rem;
-      z-index: 2;
-      
-      > .item {
-        margin-left: unset;
-        border-radius: 4px;
-        justify-content: center;
-        padding-right: unset;
-        height: 30px;
-        width: 30px;
-        
-        &::after {
-          inset: 0.125rem;
-          border-radius: 5px;
-          border-left: 1px solid var(--dnd5e-color-gold);
-        }
-      }
-    }
-  }
-  
-  .dnd5e2 .items-section {
-    .items-header .item-school, .item .item-school {
-      width: 20px;
-    }
-    .items-header .item-controls, .item .item-controls {
-      width: 50px;
-    }
-    .items-header .item-usage, .item .item-usage {
-      width: 20px;
-    }
-    .items-header .item-range, .item .item-range {
-      width: 40px;
-    }
-    .items-header .item-target, .item .item-target {
-      width: 60px;
-    }
-    .items-header .item-roll, .item .item-roll {
-      width: 20px;
-    }
-  }
+        &.collapsed {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
 
-  
+            > nav a:not(.collapse) {
+                display: none;
+            }
+        }
+
+        #actors, #journal {
+            .directory-item.journalentry, .directory-item.actor {
+                line-height: 32px;
+            }
+        }
+    }
+
+    .window-app {
+        width: 100% !important;
+        min-width: unset !important;
+
+        left: 0 !important;
+        background: black;
+
+        &:not(.dialog) {
+            top: 0 !important;
+            height: 100% !important;
+            max-height: unset !important;
+        }
+
+        .window-resizable-handle {
+            display: none;
+        }
+
+    }
+
+    .dnd5e2.sheet.actor.character {
+        min-width: unset;
+        min-height: unset;
+
+        .sidebar {
+            /*! left: 0; */
+            justify-content: center;
+
+            .rows {
+                padding-left: 0;
+                padding-right: 0;
+                overflow-x: scroll;
+            }
+
+            .rows > div {
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+        }
+
+        .ability-scores {
+            left: 0;
+
+            .rows {
+                padding-left: 0;
+                padding-right: 0;
+                /*! overflow-x: scroll; */
+            }
+
+            .rows > div {
+                gap: 0.5rem;
+                justify-content: center;
+
+            }
+
+            /*! position: relative; */
+            z-index: 2;
+
+            .ability-score {
+                max-width: calc(100% / 6 - 10px);
+            }
+        }
+
+        form.tab-details .sheet-body:has(+ section.ability-scores) .main-content {
+            padding-top: 3.5rem;
+        }
+
+        form.collapsed .main-content {
+            padding-left: 0.5rem;
+
+            > .sidebar {
+                margin-left: unset;
+                /*! height: ; */
+            }
+
+            .card {
+                .portrait, .stats, .death-tray {
+                    display: none !important;;
+                }
+            }
+
+            .favorites {
+                display: none
+            }
+        }
+
+        .sheet-body .main-content {
+            gap: 0;
+            padding-top: 0.5rem;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            display: flex;
+            flex-direction: column;
+
+            .sidebar .card {
+                .collapser {
+
+                    inset: auto calc(50% - 16px) 100% auto;
+                    height: 16px;
+                    width: 32px;
+                    border-radius: 3px 3px 0 0;
+                }
+
+                margin: auto;
+                display: flex;
+
+                .portrait {
+                    width: 50%;
+                    display: inline-block;
+                    height: auto;
+                    aspect-ratio: 1 !important;
+
+                    > img {
+                        border-bottom: 0;
+                        object-position: center;
+                    }
+                }
+
+                .stats {
+                    width: var(--dnd5e-sheet-sidebar-width);
+                }
+
+                margin-top: 1rem;
+            }
+        }
+
+        .sheet-body .tab-body {
+            padding-bottom: calc(1.5rem + 30px);
+
+            .details.col-2 {
+                width: unset;
+                display: flex;
+                flex-direction: column
+            }
+        }
+
+        .main-content .tab-body {
+            padding-top: 10px;
+        }
+
+        nav.tabs {
+            position: absolute;
+            flex-direction: row;
+            gap: 1rem;
+            margin-left: 1rem;
+            left: unset;
+            margin-right: auto;
+            top: unset;
+            bottom: 1rem;
+            z-index: 2;
+
+            > .item {
+                margin-left: unset;
+                border-radius: 4px;
+                justify-content: center;
+                padding-right: unset;
+                height: 30px;
+                width: 30px;
+
+                &::after {
+                    inset: 0.125rem;
+                    border-radius: 5px;
+                    border-left: 1px solid var(--dnd5e-color-gold);
+                }
+            }
+        }
+    }
+
+    .dnd5e2 .items-section {
+        .items-header .item-school, .item .item-school {
+            width: 20px;
+        }
+
+        .items-header .item-controls, .item .item-controls {
+            width: 50px;
+        }
+
+        .items-header .item-usage, .item .item-usage {
+            width: 20px;
+        }
+
+        .items-header .item-range, .item .item-range {
+            width: 40px;
+        }
+
+        .items-header .item-target, .item .item-target {
+            width: 60px;
+        }
+
+        .items-header .item-roll, .item .item-roll {
+            width: 20px;
+        }
+    }
+
+
 }

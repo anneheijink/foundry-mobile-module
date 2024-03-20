@@ -8,7 +8,7 @@
 			"name" : "Anne Heijink"
 		}
 	],
-	"version" : "0.0.4",
+	"version" : "0.0.5",
 	"compatibility" : {
 		"minimum" : 11,
 		"verified": 11
@@ -24,5 +24,5 @@
 	],
 	"url" : "https://github.com/anneheijink/foundry-mobile-module",
 	"manifest" : "https://raw.githubusercontent.com/anneheijink/foundry-mobile-module/main/module.json",
-	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.4.zip"
+	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.5.zip"
 }
