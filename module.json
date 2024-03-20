@@ -13,8 +13,8 @@
 		"minimum" : 11,
 		"verified": 11
 	},
-	"modules" : [
-		"scripts/fullscreen.mjs"
+	"scripts" : [
+		"scripts/fullscreen.js"
 	],
 	"styles" : [
 		"styles/foundry-mobile.css"
