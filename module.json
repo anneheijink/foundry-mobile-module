@@ -8,10 +8,10 @@
 			"name" : "Anne Heijink"
 		}
 	],
-	"version" : "0.0.5",
+	"version" : "0.0.7",
 	"compatibility" : {
-		"minimum" : 11,
-		"verified": 11
+		"minimum" : 12,
+		"verified": 12
 	},
 	"scripts" : [
 		"scripts/fullscreen.js"
@@ -20,9 +20,10 @@
 		"styles/foundry-mobile.css"
 	],
 	"system" : [
-		"dnd5e"
+		"dnd5e",
+		"pf23"
 	],
 	"url" : "https://github.com/anneheijink/foundry-mobile-module",
 	"manifest" : "https://raw.githubusercontent.com/anneheijink/foundry-mobile-module/main/module.json",
-	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.5.zip"
+	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.7.zip"
 }

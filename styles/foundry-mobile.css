@@ -1,12 +1,33 @@
 @media only screen and (max-width: 1023px) {
-    #ui-left, #ui-middle {
 
-    }
 
-    #ui-right {
-        width: 100vw;
+    #ui-left, #ui-middle, #ui-right {
+        width: 100%;
         height: 100%;
         position: absolute
+    }
+
+    #ui-left aside#players {
+        margin-bottom: calc(var(--hotbar-height) + 4rem);
+        display: none;
+    }
+
+    #ui-middle {
+        #ui-top.offset {
+            margin-left: 120px;
+        }
+
+        #hotbar {
+            width: 100%;
+
+            #macro-list {
+                grid-template-columns: repeat(5, 20%);
+            }
+
+            .macro {
+                width: 100%;
+            }
+        }
     }
 
     :root {
@@ -51,6 +72,11 @@
                 line-height: 32px;
             }
         }
+    }
+
+    .app {
+        margin: 0;
+        border-radius: 0;
     }
 
     .window-app {
