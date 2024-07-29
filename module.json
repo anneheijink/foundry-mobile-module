@@ -8,7 +8,7 @@
 			"name" : "Anne Heijink"
 		}
 	],
-	"version" : "0.0.7",
+	"version" : "0.0.8",
 	"compatibility" : {
 		"minimum" : 12,
 		"verified": 12
@@ -21,9 +21,9 @@
 	],
 	"system" : [
 		"dnd5e",
-		"pf23"
+		"pf2e"
 	],
 	"url" : "https://github.com/anneheijink/foundry-mobile-module",
 	"manifest" : "https://raw.githubusercontent.com/anneheijink/foundry-mobile-module/main/module.json",
-	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.7.zip"
+	"download" : "https://github.com/anneheijink/foundry-mobile-module/archive/refs/tags/v0.0.8.zip"
 }
